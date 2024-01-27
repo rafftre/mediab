@@ -1,0 +1,60 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+/// Regular font family (native font stack)
+/// @type List
+$font-family-base:
+  "latin_modern_sans10_regular",
+  // Safari for OS X and iOS (San Francisco)
+  -apple-system,
+  // Chrome < 56 for OS X (San Francisco)
+  BlinkMacSystemFont,
+  // Windows
+  "Segoe UI",
+  // Android
+  "Roboto",
+  // Basic web fallback
+  "Helvetica Neue", Arial, sans-serif,
+  // Emoji fonts
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+
+/// Regular font size
+/// @type Number
+$font-size-base: 14px !default;
+
+/// Regular line height
+/// @type Number
+$line-height-base: 1.428571429 !default;
+
+/// Containers maximum width
+/// @type Number
+$max-width: 1180px !default;
+
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+///   $base-url: 'http://cdn.example.com/assets/';
+$base-url: '/assets/' !default;
+
+// screen sizes
+$screen-xs-max: 320px;
+$screen-sm-max: 480px;
+$screen-md-max: 768px;
+$screen-lg-max: 960px;
+
+// colors
+$bg-color:            #2d8632;
+$cell-bg-color:       #116416;
+$cell-bg-color:       #116416;
+$row-header-bg-color: #0f5714;
+$col-header-bg-color: #004304;
+
+$fg-color:            #fff;
+$muted-color:         #072c0a;
+$penalty-color:       #c00;
+
+$promotion-color:     #0047b3;
+$promotion2-color:    lighten($promotion-color, 30%);
+$relegation-color:    #c00;
+$relegation2-color:   lighten($relegation-color, 30%);

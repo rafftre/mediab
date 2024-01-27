@@ -1,0 +1,17 @@
+// -----------------------------------------------------------------------------
+// This file contains standings header classes.
+// -----------------------------------------------------------------------------
+
+.standings {
+  .header {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    margin: 15px 0;
+    display: list-item;
+    background: image('league.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}

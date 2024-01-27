@@ -1,0 +1,15 @@
+<div class="penalties" ng-if="$ctrl.penalties.length > 0">
+  <p>
+    <small>
+      <span class="penalty">*</span>
+      Penalizzazioni:
+      <span ng-repeat="team in $ctrl.penalties">
+        {{ team.name }} {{ -team.points }} punti ({{ -team.average | number : 3 }} a partita)
+      </span>
+    </small>
+  </p>
+</div>
+
+<div ng-if="$ctrl.penalties.length <= 0">
+  <p>no penalties</p>
+</div>

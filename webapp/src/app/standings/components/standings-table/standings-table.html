@@ -1,0 +1,59 @@
+
+
+<div class="text-center" ng-if="$ctrl.loading">
+  <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+</div>
+
+<div class="isa_error" ng-if="!$ctrl.loading && $ctrl.standings.length <= 0">
+  <i class="fa fa-times-circle"></i>
+  <strong>Errore!</strong>
+  Qualcosa non va nella connessione di rete. Non è stato possibile caricare i dati.
+</div>
+
+<div class="wrapper" ng-if="$ctrl.standings.length > 0">
+  <div class="cell cell-header text-center">Pos</div>
+  <div class="cell cell-header pointer" ng-click="$ctrl.orderBy('name')">
+    Squadra<br/>
+    <i class="fa" ng-class="$ctrl.sort.asc ? 'fa-angle-up' : 'fa-angle-down'"
+      ng-show="$ctrl.sort.property == 'name'"></i>
+  </div>
+  <div class="cell cell-header text-center pointer" ng-click="$ctrl.orderBy('average')">
+    M<br/>
+    <i class="fa" ng-class="$ctrl.sort.asc ? 'fa-angle-up' : 'fa-angle-down'"
+      ng-show="$ctrl.sort.property == 'average'"></i>
+  </div>
+  <div class="cell cell-header text-center pointer" ng-click="$ctrl.orderBy('points')">
+    Pt<br/>
+    <i class="fa" ng-class="$ctrl.sort.asc ? 'fa-angle-up' : 'fa-angle-down'"
+      ng-show="$ctrl.sort.property == 'points'"></i>
+  </div>
+  <div class="cell cell-header text-center pointer" ng-click="$ctrl.orderBy('played')">
+    G<br/>
+    <i class="fa" ng-class="$ctrl.sort.asc ? 'fa-angle-up' : 'fa-angle-down'"
+      ng-show="$ctrl.sort.property == 'played'"></i>
+  </div>
+  <div class="cell cell-header cell-won text-center pointer" ng-click="$ctrl.orderBy('won')">
+    V-N-P<br/>
+    <i class="fa" ng-class="$ctrl.sort.asc ? 'fa-angle-up' : 'fa-angle-down'"
+      ng-show="$ctrl.sort.property == 'won'"></i>
+  </div>
+
+  <div class="cell cell-row-header text-center" ng-class="{
+      'cell-promotion' : ($ctrl.sort.property == 'average' || $ctrl.sort.property == 'points') && $index < 2,
+      'cell-promotion2' : ($ctrl.sort.property == 'average' || $ctrl.sort.property == 'points') &&
+        $index >= 2 && $index < 8,
+      'cell-relegation2' : ($ctrl.sort.property == 'average' || $ctrl.sort.property == 'points') &&
+        $index >= 14 && $index < 16,
+      'cell-relegation' : ($ctrl.sort.property == 'average' || $ctrl.sort.property == 'points') && $index >= 16
+    }" ng-repeat-start="team in $ctrl.standings">{{ $index + 1 }}</div>
+  <div class="cell">
+    <img class="team-logo" ng-src="{{ '/assets/images/teams/' + (team.name | lowercase) + '.png' }}"/>
+    {{ team.name }}
+    <span class="penalty" ng-show="team.penalty">*</span>
+  </div>
+  <div class="cell text-center">{{ team.average | number : 3 }}</div>
+  <div class="cell text-center">{{ team.points }}</div>
+  <div class="cell text-center">{{ team.played }}</div>
+  <div class="cell cell-won text-center" ng-repeat-end>{{ team.won }}-{{ team.drawn }}-{{ team.lost }}</div>
+</div>
+<!-- /-wrapper -->

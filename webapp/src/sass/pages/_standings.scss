@@ -1,0 +1,28 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the home page.
+// -----------------------------------------------------------------------------
+
+body {
+  margin: 0 5px 5px 5px;
+  background-color: $bg-color;
+  color: $fg-color;
+}
+@media (min-width: $screen-xs-max) and (max-width: $screen-sm-max) {
+  body {
+    font-size: 70%;
+  }
+}
+@media (max-width: $screen-xs-max) {
+  body {
+    font-size: 60%;
+  }
+}
+
+.dev-info {
+  position: absolute;
+  right: 5px;
+  top: 0;
+  color: #999;
+  font-size: 0.8em;
+  text-transform: uppercase;
+}

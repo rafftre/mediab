@@ -1,0 +1,12 @@
+<div class="dev-info">
+  ### DEBUG INFO
+  - Initial width: {{ $ctrl.debugStatus.width }}
+  - Requests: {{ $ctrl.debugStatus.remaining }}/{{ $ctrl.debugStatus.limit }}
+  ###
+</div>
+
+<div class="standings">
+  <standings-header></standings-header>
+  <standings-table loading="$ctrl.waitingData" standings="$ctrl.standings"></standings-table>
+  <standings-footer penalties="$ctrl.penalties"></standings-footer>
+</div>

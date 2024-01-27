@@ -1,0 +1,55 @@
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import
+  'abstracts/variables',
+  'abstracts/functions',
+  'abstracts/mixins';
+
+// 2. Vendors
+@import
+  'vendor/normalize',
+  // Font Awesome Free 5.0.13
+  'vendor/fontawesome/variables',
+  'vendor/fontawesome/mixins',
+  'vendor/fontawesome/core',
+  'vendor/fontawesome/larger',
+  'vendor/fontawesome/fixed-width',
+  'vendor/fontawesome/list',
+  'vendor/fontawesome/bordered-pulled',
+  'vendor/fontawesome/animated',
+  'vendor/fontawesome/rotated-flipped',
+  'vendor/fontawesome/stacked',
+  'vendor/fontawesome/icons',
+  'vendor/fontawesome/screen-reader',
+  'vendor-extensions/fontawesome/fa-brands',
+  'vendor-extensions/fontawesome/fa-regular',
+  'vendor-extensions/fontawesome/fa-solid';
+
+// 3. Base stuff
+@import
+  'base/base',
+  'base/fonts',
+  'base/forms',
+  'base/helpers',
+  'base/print',
+  'base/typography';
+
+// 4. Layout-related sections
+@import
+  'layout/header',
+  'layout/footer';
+
+// 5. Components;
+@import
+   'components/standings-table',
+   'components/standings-header',
+   'components/standings-footer';
+
+// 6. Page-specific styles
+@import
+  'pages/standings';
+  
+// 7. Themes
+@import
+  'themes/default';

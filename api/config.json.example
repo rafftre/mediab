@@ -1,0 +1,9 @@
+{
+  "DEFAULT": {
+    "API_KEY": "abcdefghijklmnopqrstuvwxyz",
+    "DATABASE_SERVER": "127.0.0.1:5432",
+    "DATABASE_NAME": "dbname",
+    "DATABASE_USER": "username",
+    "DATABASE_PASSWD": "password"
+  }
+}

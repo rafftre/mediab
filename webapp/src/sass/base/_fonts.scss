@@ -1,0 +1,36 @@
+// -----------------------------------------------------------------------------
+// This file contains all @font-face declarations, if any.
+// -----------------------------------------------------------------------------
+
+@font-face {
+    font-family: 'latin_modern_sans10_regular';
+    font-style: normal;
+    font-weight: normal;
+    src: font('lmsans10-regular-webfont.eot');
+    src: font('lmsans10-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         font('lmsans10-regular-webfont.woff') format('woff'),
+         font('lmsans10-regular-webfont.ttf') format('truetype'),
+         font('lmsans10-regular-webfont.svg#latin_modern_sans10_regular') format('svg');
+}
+
+@font-face {
+    font-family: 'latin_modern_sans10_bold';
+    font-style: normal;
+    font-weight: normal;
+    src: font('lmsans10-bold-webfont.eot');
+    src: font('lmsans10-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         font('lmsans10-bold-webfont.woff') format('woff'),
+         font('lmsans10-bold-webfont.ttf') format('truetype'),
+         font('lmsans10-bold-webfont.svg#latin_modern_sans10_bold') format('svg');
+}
+
+@font-face {
+    font-family: 'latin_modern_sans_demi_co10Rg';
+    font-style: normal;
+    font-weight: normal;
+    src: font('lmsansdemicond10-regular-webfont.eot');
+    src: font('lmsansdemicond10-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         font('lmsansdemicond10-regular-webfont.woff') format('woff'),
+         font('lmsansdemicond10-regular-webfont.ttf') format('truetype'),
+         font('lmsansdemicond10-regular-webfont.svg#latin_modern_sans_demi_co10Rg') format('svg');
+}
